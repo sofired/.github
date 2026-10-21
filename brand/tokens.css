@@ -1,0 +1,36 @@
+/* Sofired colour and type, for the website. See brand/README.md for the
+   contrast pairings: Ember is for graphics on light grounds; use Ember Deep
+   for text there. */
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --sofired-char: #231A15;
+  --sofired-ash: #EEEBE6;
+  --sofired-ember: #C9561A;
+  --sofired-ember-deep: #B5480F;
+  --sofired-ember-light: #F28A45;
+  --sofired-hearth: #17110D;
+  --sofired-smoke: #6E6158;
+  --sofired-smoke-light: #B3A597;
+
+  --sofired-font-display: "Zilla Slab", Rockwell, "Roboto Slab", Georgia, serif;
+  --sofired-font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sofired-font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  /* Roles, light theme */
+  --sofired-bg: var(--sofired-ash);
+  --sofired-text: var(--sofired-char);
+  --sofired-text-muted: var(--sofired-smoke);
+  --sofired-link: var(--sofired-ember-deep);
+  --sofired-accent: var(--sofired-ember);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sofired-bg: var(--sofired-hearth);
+    --sofired-text: var(--sofired-ash);
+    --sofired-text-muted: var(--sofired-smoke-light);
+    --sofired-link: var(--sofired-ember-light);
+    --sofired-accent: var(--sofired-ember-light);
+  }
+}
