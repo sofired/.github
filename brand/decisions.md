@@ -67,5 +67,10 @@ wordmark and the GitHub display name.
   regenerates them. HarfBuzz applied no kerning between these letters.
 - The space between the S and the "o" was tightened from the browser mock-up
   (about 76 font units of white) to about 50, close to Zilla Slab's own S–o.
+- The first production wordmark drew the S at 6.6 grid units, about 104 font
+  units, and it read visibly lighter than the letters. Measured against Zilla
+  Slab Bold (stems 129, its own S 116 to 144), the stroke went to 8.8 grid
+  units, about 132. The bar moved down with it so the gap keeps the master's
+  3-to-7 proportion to the stroke.
 - The avatar PNGs are rasterised by `build.py` from the stroke geometry,
   using the standard library only, so the build needs no image tools.

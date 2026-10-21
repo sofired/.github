@@ -1,14 +1,14 @@
 <h1>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sofired/.github/main/brand/sofired-logo-dark.svg">
-    <img alt="Sofired" src="https://raw.githubusercontent.com/sofired/.github/main/brand/sofired-logo.svg" width="202" height="57">
+    <img alt="Sofired" src="https://raw.githubusercontent.com/sofired/.github/main/brand/sofired-logo.svg" width="195" height="57">
   </picture>
 </h1>
 
 We're Southern Fired Software, and we develop software. Most of that work is
 for clients, from startups to established companies. We build custom software,
 set up the testing and delivery pipelines that keep it reliable, move it to the
-cloud and keep its cost and performance in check, and help teams make
+cloud and keep its cost and performance in check, and help teams make the
 technical decisions along the way.
 
 The projects below are tools we built because our own development work needed
@@ -27,4 +27,4 @@ Install our command-line tools with Homebrew from
 ## Working with us
 
 If you'd like help with your own software, write to contact@sofired.io or see
-[https://sofired.io](https://sofired.io).
+[sofired.io](https://sofired.io).

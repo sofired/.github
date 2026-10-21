@@ -74,8 +74,10 @@ empty row, and a two-pixel bar. Use it at 16 px, and the master from 20 px up.
 The wordmark is "Tucked": the S Bar takes the place of the S, and "ofired"
 follows in Zilla Slab Bold with the fi ligature, converted to outlines. The
 drawn S is sized to Zilla Slab's own S (it overshoots the baseline and cap
-height by the same amounts) and drawn at 6.6 units instead of 7 to match the
-letters' stems. Its bar drops into the descender space under the S only.
+height by the same amounts) and drawn at 8.8 grid units, about 132 font units,
+to match the letters: Zilla Slab Bold's stems measure 129 and its own S 116 to
+144. The gap above the bar keeps the master's proportion to the stroke, and
+the bar drops into the descender space under the S only.
 
 - Always set it as one piece: never re-type "Sofired" in a font with the mark
   in front.

@@ -32,9 +32,12 @@ def stroke(colour, d, width=STROKE):
             'stroke-linecap="round" stroke-linejoin="round" fill="none"/>')
 
 
-def mark(fg, accent, width=STROKE):
-    """Return the S Bar on a 64x64 grid: the S in fg, the bar in accent."""
-    return stroke(fg, S_PATH, width) + stroke(accent, BAR_PATH, width)
+def mark(fg, accent, width=STROKE, bar_y=55):
+    """Return the S Bar on a 64x64 grid: the S in fg, the bar in accent.
+
+    bar_y moves the bar down when the strokes are heavier, to keep the gap.
+    """
+    return stroke(fg, S_PATH, width) + stroke(accent, f'M18 {bar_y:g}H46', width)
 
 
 # Avatar: the mark at 76% on a full-bleed Char square. GitHub rounds the
@@ -214,27 +217,34 @@ OFIRED = (
 )
 
 # The drawn S is sized to Zilla Slab's own S (-10..660 font units, so it
-# overshoots the baseline and the 650 cap height by the same amounts) and
-# drawn lighter than the mark, 6.6 units, to match the letters' stems. Its bar
-# drops into the descender space.
-WORDMARK_STROKE = 6.6
+# overshoots the baseline and the 650 cap height by the same amounts). Its
+# stroke, 8.8 grid units, comes to about 132 font units: Zilla Slab Bold's
+# stems measure 129, its own S 116 to 144. The bar drops into the descender
+# space.
+WORDMARK_STROKE = 8.8
 S_SCALE = 670 / (36 + WORDMARK_STROKE)          # font units per grid unit
 S_LEFT = 18 - WORDMARK_STROKE / 2               # bar's left edge on the grid
 S_BOTTOM = 45 + WORDMARK_STROKE / 2             # S's lowest point on the grid
-OFIRED_X = 570  # where "ofired" starts; spacing hand-set against the S's right edge
+S_RIGHT = 45 + WORDMARK_STROKE / 2              # S's rightmost point on the grid
+# The gap between the S and the bar keeps the master's proportion to the
+# stroke: 3 units of gap to a 7-unit stroke.
+WORDMARK_BAR_Y = round(45 + WORDMARK_STROKE * (1 + 3 / STROKE), 2)
+# Where "ofired" starts: 30 units after the S, so with the o's 20-unit side
+# bearing the white between them is 50, close to Zilla Slab's own S and o.
+OFIRED_X = round((S_RIGHT - S_LEFT) * S_SCALE) + 30
 
 
 def lockup(fg, accent):
     """Return the wordmark: the S Bar as the S, then "ofired"."""
     tx, ty = -S_LEFT * S_SCALE, 10 - S_BOTTOM * S_SCALE
-    bar_bottom = 10 + (55 + WORDMARK_STROKE / 2 - S_BOTTOM) * S_SCALE
+    bar_bottom = 10 + (WORDMARK_BAR_Y + WORDMARK_STROKE / 2 - S_BOTTOM) * S_SCALE
     pad = 20
     width = OFIRED_X + 2600 + 2 * pad
     top = -698 - pad
     height = math.ceil(bar_bottom + pad - top)
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{-pad} {top} {width} {height}">'
             f'<g transform="translate({tx:.1f} {ty:.1f}) scale({S_SCALE:.4f})">'
-            f'{mark(fg, accent, WORDMARK_STROKE)}</g>'
+            f'{mark(fg, accent, WORDMARK_STROKE, WORDMARK_BAR_Y)}</g>'
             f'<path fill="{fg}" transform="translate({OFIRED_X} 0)" d="{OFIRED}"/></svg>')
 
 
