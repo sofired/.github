@@ -5,9 +5,9 @@ what was tried. Recorded in October 2026.
 
 ## The brief
 
-- **What Sofired is.** A software engineering consultancy based in Alabama
-  that also builds and maintains open-source tools (treerig, composemux,
-  tracedoc, grizzle).
+- **What Sofired is.** A software development company based in Alabama. It
+  built tools for its own development work (treerig, composemux, tracedoc,
+  grizzle) and shares them as open source.
 - **How it should feel.** Crafted and warm, with some personality.
 - **How it relates to products.** It endorses them: each product keeps its own
   brand, and Sofired appears once, small, at the end.

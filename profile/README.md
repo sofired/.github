@@ -5,9 +5,9 @@
   </picture>
 </h1>
 
-Southern Fired Software is a software engineering consultancy in Alabama. We
-work on cloud infrastructure, CI/CD, automated testing, custom software and
-technical leadership, and we build and maintain the open-source tools below.
+We're Southern Fired Software, and we develop software. The projects below
+are tools we built to help with our own development work. We're sharing them
+in case they help with yours.
 
 | Project | What it does |
 | --- | --- |
