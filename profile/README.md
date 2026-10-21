@@ -5,9 +5,14 @@
   </picture>
 </h1>
 
-We're Southern Fired Software, and we develop software. The projects below
-are tools we built to help with our own development work. We're sharing them
-in case they help with yours.
+We're Southern Fired Software, and we develop software. Most of that work is
+for clients, from startups to established companies. We build custom software,
+set up the testing and delivery pipelines that keep it reliable, move it to the
+cloud and keep its cost and performance in check, and help teams make
+technical decisions along the way.
+
+The projects below are tools we built because our own development work needed
+them. We're sharing them in case they help with yours.
 
 | Project | What it does |
 | --- | --- |
@@ -19,5 +24,7 @@ in case they help with yours.
 Install our command-line tools with Homebrew from
 [sofired/homebrew-tap](https://github.com/sofired/homebrew-tap).
 
-[southernfiredsoftware.com](https://www.southernfiredsoftware.com) ·
-contact@southernfiredsoftware.com
+## Working with us
+
+If you'd like help with your own software, write to contact@sofired.io or see
+[https://sofired.io](https://sofired.io).

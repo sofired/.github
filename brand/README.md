@@ -161,6 +161,7 @@ Each step says whether it is done.
    template logo go.
 5. **Product endorsements** (not done). Add the "made by Sofired" line to
    each product README, in that product's ink.
-6. **Domains** (open). The website is southernfiredsoftware.com; package
-   metadata and contacts use sofired.io. Pick one as primary and redirect the
-   other.
+6. **Domains** (decided, not done). sofired.io is the primary domain. Serve
+   the website there and redirect southernfiredsoftware.com and its `www`
+   host to it permanently (301). The site's contact address changes from
+   contact@southernfiredsoftware.com to contact@sofired.io.
